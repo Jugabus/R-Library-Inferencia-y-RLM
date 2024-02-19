@@ -1,0 +1,96 @@
+* using log directory 'C:/Users/jugab/Desktop/InfRLMult.Rcheck'
+* using R version 4.1.0 (2021-05-18)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: ISO8859-1
+* checking for file 'InfRLMult/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'InfRLMult' version '1.0'
+* package encoding: latin1
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking whether package 'InfRLMult' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Checking should be performed on sources prepared by 'R CMD build'.
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... WARNING
+Found the following files with non-ASCII characters:
+  anov.R
+  contraste.R
+  nulidad.R
+  prediccion.R
+Portable packages must use only ASCII characters in their R code,
+except perhaps in comments.
+Use \uxxxx escapes for other characters.
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+anov: no visible global function definition for 'pf'
+contraste: no visible global function definition for 'qf'
+intervalo: no visible global function definition for 'qt'
+intervalo: no visible global function definition for 'qchisq'
+nulidad: no visible global function definition for 'qt'
+nulidad: no visible global function definition for 'qf'
+prediccion: no visible global function definition for 'qt'
+Undefined global functions or variables:
+  pf qchisq qf qt
+Consider adding
+  importFrom("stats", "pf", "qchisq", "qf", "qt")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  'nulidad' 'prediccion'
+All user-level objects in a package should have documentation entries.
+See chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking for code/documentation mismatches ... WARNING
+Codoc mismatches from documentation object 'Nulidad':
+nulidad
+  Code: function(x, y, i, j, alpha, beta0)
+  Docs: function(x, y, i, alpha)
+  Argument names in code not in docs:
+    j beta0
+  Mismatches in argument names:
+    Position: 4 Code: j Docs: alpha
+
+* checking Rd \usage sections ... WARNING
+Documented arguments not in \usage in documentation object 'Nulidad':
+  'j' 'beta0'
+Objects in \usage without \alias in documentation object 'Nulidad':
+  'nulidad'
+
+Objects in \usage without \alias in documentation object 'Prediccion':
+  'prediccion'
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... OK
+* checking PDF version of manual ... OK
+* DONE
+Status: 4 WARNINGs, 2 NOTEs

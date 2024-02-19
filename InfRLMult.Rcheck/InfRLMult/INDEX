@@ -1,0 +1,8 @@
+Nulidad                 Contraste de nulidad y sobre un subvector
+Prediccion              Predecir la variable dependiente y su media
+anov                    Tabla anova de la regresión
+contraste               Contrastes de hipótesis sobre los parámetros
+                        del modelo
+estimacion              Estimación de los parámetros del modelo
+intervalo               Intervalos de confianza para los parámetros del
+                        modelo

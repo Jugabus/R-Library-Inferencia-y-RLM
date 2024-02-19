@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Contraste de nulidad y sobre un subvector</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Nulidad"><tr><td>Nulidad</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Contraste de nulidad y sobre un subvector</h2>
+
+<h3>Description</h3>
+
+<p>Resuelve los contrastes de nulidad de los parámetros del modelo y contrastes sobre un subvector del vector de parámetros.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+nulidad(x,y,i,alpha)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>un objeto matriz de las variables independientes</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>un objeto vector de la variable dependiente</p>
+</td></tr>
+<tr valign="top"><td><code>i</code></td>
+<td>
+<p>un objeto numérico que indique el coeficiente de beta sobre el que se quiere hacer el contraste</p>
+</td></tr>
+<tr valign="top"><td><code>j</code></td>
+<td>
+<p>un objeto numérico que indique el coeficiente de beta sobre el que se quiere hacer el contraste</p>
+</td></tr>
+<tr valign="top"><td><code>alpha</code></td>
+<td>
+<p>un objeto númerico que indique el nivel de significación del contraste</p>
+</td></tr>
+<tr valign="top"><td><code>beta0</code></td>
+<td>
+<p>un objeto vector que indique el valor de los beta en el contraste del subvector que queremos realizar</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Realiza el contraste de nulidad sobre los betas que indiquemos de un modelo de regresión lineal múltiple. Para ello debemos de indicar primero las variables independientes mediantes una matriz, luego el vector que contenga a la variable dependiente.
+<br />
+<br />
+Además debemos de indicar el número del beta sobre el que queremos realizar el contraste. También hay que indicar el valor del alpha de nuestro contraste.
+<br />
+<br />
+También realiza un contraste de un subvector de los betas que nosotros le indiquemos.
+<br />
+<br />
+En pantalla nos mostrará si se acepta o se rechaza ambas  hipótesis nulas, diferenciando entre el contraste de nulidad y del subvector.
+</p>
+
+
+<h3>Value</h3>
+
+<p>La función <code>nulidad</code> nos muestra &ldquo;Se rechaza la hipótesis nula&rdquo; si el estadístico <code>Texp</code> de contraste en valor absoluto es estrictamente mayor que el valor de la <code>t-student</code> asociado en el contraste de nulidad primero.
+<br />
+<br />
+Y nos muestra &ldquo;No se rechaza la hipótesis nula&rdquo; si el estadístico de contraste en valor absoluto es menor o igual que el valor de la &ldquo;t-student&rdquo; asociado.
+<br />
+<br />
+Además nos muestra &ldquo;Se rechaza la hipótesis nula&rdquo; si el estadístico de contraste <code>Fexp</code> es estrictamente mayor que el valor de la <code>F-snedecor</code>.
+<br />
+<br />
+Y si el estadístico de contraste <code>Fexp</code> es menor o igual que el valor de la <code>F-snedecor</code> asociado nos muestra &ldquo;No se rechaza la hipótesis nula&rdquo;.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Julio García Bustos,
+Juan Luis Martínez Gualda,
+Juan José De la Hoz Gómez y
+Eduardo Arroyo Galán
+</p>
+
+
+<h3>References</h3>
+
+<p>Formulario Regresión Lineal
+<br />
+<br />
+Ejemplos Regresión Lineal
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+x&lt;-matrix(c(3,1,5,2,4,5,4,6,4,6),ncol=2)
+y&lt;-c(3,1,8,3,5)
+alpha&lt;-0.05
+i&lt;-1
+j&lt;-2
+beta0&lt;-c(1,-2)
+nulidad(x,y,i,j,alpha,beta0)
+</pre>
+
+
+</body></html>

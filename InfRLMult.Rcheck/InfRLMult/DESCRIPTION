@@ -1,0 +1,11 @@
+Encoding: latin1
+Package: InfRLMult
+Type: Package
+Title: Infiere y estima sobre las variables deseadas
+Version: 1.0
+Date: 2021-06-16
+Author: Julio García Bustos,Juan Luis Martínez Gualda,Juan José De la Hoz Gómez y Eduardo Arroyo Galán
+Maintainer: Julio García Bustos <jugabus@gmail.com>
+Description: Este paquete contiene muchas funciones relacionadas con la inferencia y estimaciones puntuales, de intervalos, contraste de hipótesis y más características sobre la regresión lineal múltiple. En casi todas las funciones se pide en los argumentos una matriz x pero se tiene que introducir sin la columna de 1 ya que las mismas funciones se la introducen.
+License: GPL-2
+Built: R 4.1.0; ; 2021-06-19 14:44:15 UTC; windows

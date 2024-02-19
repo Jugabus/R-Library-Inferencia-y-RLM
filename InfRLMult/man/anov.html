@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Tabla anova de la regresión</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for anov"><tr><td>anov</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Tabla anova de la regresión</h2>
+
+<h3>Description</h3>
+
+<p>Realiza una tabla Anova, nos muestra el coeficiente de determinación y el contraste de regresión</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+anov(x,y,alpha)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>un objeto matriz de las variables independientes</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>un objeto vector de la variable dependiente</p>
+</td></tr>
+<tr valign="top"><td><code>alpha</code></td>
+<td>
+<p>un objeto numérico que indique el nivel de significación del contraste</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Calcula la tabla Anova sobre las variables con las que estamos trabajando, además unas vez que obtiene la tabla, calcula el coeficiente de determinación.
+<br />
+<br />
+Y por último compara el p-valor con el alpha para ver si se rechaza o no el contraste.
+<br />
+</p>
+
+
+<h3>Value</h3>
+
+<p>La función <code>anov</code> nos muestra la tabla que obtendríamos con las variables que introducimos, luego nos muestra el coeficiente de determinación.
+<br />
+<br />
+Y por último nos muestra si se rechaza o acepta el contraste de regresión en función del p-valor.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Julio García Bustos, 
+Juan Luis Martínez Gualda,
+Juan José De la Hoz Gómez y 
+Eduardo Arroyo Galán
+</p>
+
+
+<h3>References</h3>
+
+<p>Formulario Regresión Lineal 
+<br />
+<br />
+Ejemplos Regresión Lineal
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+x&lt;-matrix(c(3,1,5,2,4,5,4,6,4,6),ncol=2)
+y&lt;-c(3,1,8,3,5)
+alpha&lt;-0.05
+anov(x,y,alpha)
+</pre>
+
+
+</body></html>

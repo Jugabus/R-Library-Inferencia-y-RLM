@@ -1,0 +1,2 @@
+export("estimacion", "anov", "intervalo", "nulidad",
+       "contraste", "prediccion")

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Estimación de los parámetros del modelo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for estimacion"><tr><td>estimacion</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Estimación de los parámetros del modelo</h2>
+
+<h3>Description</h3>
+
+<p>Estima los parámetros del modelo, además de la varianza de los errores</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+estimacion(x,y)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>Un objeto matriz de variables independientes</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>un objeto vector de la variable dependiente</p>
+</td></tr></table>
+
+
+<h3>Details</h3>
+
+<p>Una vez introduccido las variables dependientes mediante una matriz y la variable independiente mendiante un vector,realiza una estimación de los parámetros beta mediante el uso de las fórmulas, además de calcular la varianza de errores.
+<br />
+</p>
+
+
+<h3>Value</h3>
+
+<p>La función <code>estimacion</code> nos muestra mediante una lista los coeficientes del modelo, es decir, los betas obtenidos y el valor de la varianza de errores.
+<br />
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Julio García Bustos, 
+Juan Luis Martínez Gualda,
+Juan José De la Hoz Gómez y 
+Eduardo Arroyo Galán
+</p>
+
+
+<h3>References</h3>
+
+<p>Formulario Regresión Lineal 
+<br />
+<br />
+Ejemplos Regresión Lineal
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+x&lt;-matrix(c(3,1,5,2,4,5,4,6,4,6),ncol=2)
+y&lt;-c(3,1,8,3,5)
+estimacion(x,y)
+</pre>
+
+
+</body></html>

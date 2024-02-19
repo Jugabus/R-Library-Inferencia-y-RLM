@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Intervalos de confianza para los parámetros del modelo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for intervalo"><tr><td>intervalo</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+Intervalos de confianza para los parámetros del modelo
+</h2>
+
+<h3>Description</h3>
+
+<p>Proporciona intervalos de confianza para los parámetros del modelo de regresión lineal múltiple a un nivel de confianza.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+intervalo(x, y, alpha)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>un objeto matriz de las variables independientes</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>un objeto vector de la variable dependiente</p>
+</td></tr>
+<tr valign="top"><td><code>alpha</code></td>
+<td>
+<p>un objeto numérico que indique el nivel de significación del contraste</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Realiza los intervalos de confianza devolviendo los extremos 
+inferiores y superiores de los coeficientes del modelo y de la varianza de los errores.
+</p>
+
+
+<h3>Value</h3>
+
+<p>La función <code>intervalo</code> nos muestra una lista cuyo primer elemento es el intervalo de los coeficientes Beta (en forma matricial) y cuyo segundo elemento es el de la varianza de los errores.
+<br />
+<br />
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Julio García Bustos, 
+Juan Luis Martínez Gualda,
+Juan José De la Hoz Gómez y 
+Eduardo Arroyo Galán
+</p>
+
+
+<h3>References</h3>
+
+<p>Formulario Regresión Lineal
+<br />
+<br />
+Ejemplos Regresión Lineal
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+x&lt;-matrix(c(3,1,5,2,4,5,4,6,4,6),ncol=2)
+y&lt;-c(3,1,8,3,5)
+alpha&lt;-0.05
+
+intervalo(x,y,alpha)
+
+</pre>
+
+
+</body></html>

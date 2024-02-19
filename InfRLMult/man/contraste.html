@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Contrastes de hipótesis sobre los parámetros del modelo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for contraste"><tr><td>contraste</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Contrastes de hipótesis sobre los parámetros del modelo</h2>
+
+<h3>Description</h3>
+
+<p>Resuelve los contrastes de nulidad de los parámetros del modelo y contrastes sobre un subvector del vector de parámetros.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+contraste(x,y,alpha,R,r)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>un objeto matriz de las variables independientes</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>un objeto vector de la variable dependiente</p>
+</td></tr>
+<tr valign="top"><td><code>alpha</code></td>
+<td>
+<p>un objeto numérico que indique el nivel de significación del contraste</p>
+</td></tr>
+<tr valign="top"><td><code>R</code></td>
+<td>
+<p>un objeto matriz que contiene restricciones lineales</p>
+</td></tr>
+<tr valign="top"><td><code>r</code></td>
+<td>
+<p>un objeto vector que contiene restricciones lineales</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Resuelve contrastes definidos por las restricciones lineales que le indiquemos sobre los parámetros de nuestro modelo de regresión lineal múltiple.
+<br />
+<br />
+Además de reestimar el modelo bajo dichas restricciones lineales.  
+<br />
+<br />
+</p>
+
+
+<h3>Value</h3>
+
+<p>La función <code>contraste</code> nos muestra la predicción de la variable junto con la predicción de su media.
+<br />
+<br />
+Además nos muestra un invervalo de confianza de dichas predicciones.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Julio García Bustos, 
+Juan Luis Martínez Gualda,
+Juan José De la Hoz Gómez y 
+Eduardo Arroyo Galán
+</p>
+
+
+<h3>References</h3>
+
+<p>Formulario Regresión Lineal 
+<br />
+<br />
+Ejemplos Regresión Lineal
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+x&lt;-matrix(c(3,1,5,2,4,5,4,6,4,6),ncol=2)
+y&lt;-c(3,1,8,3,5)
+alpha&lt;-0.05
+R&lt;-matrix(c(1,0,0,1,0,-2),ncol=3)
+r&lt;-c(3,0)
+
+contraste(x,y,alpha,R,r)
+</pre>
+
+
+</body></html>
